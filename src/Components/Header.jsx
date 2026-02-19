@@ -6,7 +6,7 @@ function Header() {
   const [open, setOpen] = useState(false);
   return (
     <>
-    <div className="lg:w-full bg-black">
+    <div className="lg:w-full w-[375px] bg-black">
       <div className="max-w-[1312px] mx-auto h-[72px] flex items-center justify-between px-4 lg:px-0">
 
         {/* Logo */}
