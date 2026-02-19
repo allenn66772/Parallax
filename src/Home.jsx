@@ -12,7 +12,7 @@ function Home() {
     <Header/>
     {/* Main Contents */}
     {/* Div 1 */}
-  <div className="lg:w-full lg:h-[577px] w-[375px] h-[454px]   bg-[#07050D] flex justify-center items-center px-4">
+  <div className="lg:w-full lg:h-[577px] w-full h-[454px]   bg-[#07050D] flex justify-center items-center px-4">
 
   <div className="w-full lg:w-[1280px] lg:h-[353px] flex justify-center">
 
@@ -54,10 +54,10 @@ function Home() {
   </div>
 </div>
      {/* image 1 Div */}
-     <div className="lg:w-full lg:h-[710px] w-[375px] h-[211px]"><img className="lg:w-full lg:h-[710px] w-[375px] h-[211px]" src={banner02}  alt="" /></div>
+     <div className="lg:w-full lg:h-[710px] w-full h-[211px]"><img className="lg:w-full lg:h-[710px] w-[375px] h-[211px]" src={banner02}  alt="" /></div>
 
      {/* capabilites */}
-      <div className="lg:w-full lg:h-[1076.68px] w-[375px] h-[1538px] bg-[#07050D] flex justify-center items-center">
+      <div className="lg:w-full lg:h-[1076.68px] w-full h-[1538px] bg-[#07050D] flex justify-center items-center">
         <div className="w-[335px] h-[1410px] lg:w-[1280px] lg:h-[852.68px]  flex-col flex justify-center">
           <div className="lg:w-[768px] lg:h-[160px] w-[335px] h-[167px] lg:ms-[256px] flex-col justify-center">
             <div className="w-[335px] h-[43px] lg:w-[768px] lg:h-[72px]  flex justify-center items-center">
