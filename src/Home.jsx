@@ -54,7 +54,7 @@ function Home() {
   </div>
 </div>
      {/* image 1 Div */}
-     <div className="lg:w-full lg:h-[710px] w-full h-[211px]"><img className="lg:w-full lg:h-[710px] w-[375px] h-[211px]" src={banner02}  alt="" /></div>
+     <div className="lg:w-full lg:h-[710px] w-full h-[211px]"><img className="lg:w-full lg:h-[710px] w-full h-[211px]" src={banner02}  alt="" /></div>
 
      {/* capabilites */}
       <div className="lg:w-full lg:h-[1076.68px] w-full h-[1538px] bg-[#07050D] flex justify-center items-center">
