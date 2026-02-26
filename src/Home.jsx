@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Components/Header'
 import banner02 from './assets/banner02.avif'
+import banner03 from './assets/banner03.jpg'
 import card01 from './assets/card01.png'
 import card02 from './assets/card02.jpg'
 import card03 from './assets/card03.jpg'
@@ -57,17 +58,17 @@ function Home() {
      <div className="lg:w-full lg:h-[710px] w-full h-[211px]"><img className="lg:w-full lg:h-[710px] w-full h-[211px]" src={banner02}  alt="" /></div>
 
      {/* capabilites */}
-      <div className="lg:w-full lg:h-[1076.68px] w-full h-[1538px] bg-[#07050D] flex justify-center items-center">
-        <div className="w-[335px] h-[1410px] lg:w-[1280px] lg:h-[852.68px]  flex-col flex justify-center">
-          <div className="lg:w-[768px] lg:h-[160px] w-[335px] h-[167px] lg:ms-[256px] flex-col justify-center">
-            <div className="w-[335px] h-[43px] lg:w-[768px] lg:h-[72px]  flex justify-center items-center">
+      <div className="lg:w-full  w-full h-auto bg-[#07050D] flex justify-center items-center">
+        <div className="w-83.75 h-352.5 lg:w-7xl lg:h-[852.68px]  flex-col flex justify-center">
+          <div className="lg:w-3xl lg:h-40 w-83.75 h-41.75 lg:ms-64 flex-col justify-center">
+            <div className="w-83.75 h-10.75 lg:w-3xl lg:h-18  flex justify-center items-center">
               <h1 className='text-white text-4xl lg:text-6xl font-semibold'>What we do best </h1>
             </div>
-            <div className="w-[335px] h-[104px]  lg:w-[768px] lg:h-[64px] mt-[24px]">
+            <div className="w-83.75 h-26  lg:w-3xl lg:h-16 mt-6">
               <p className='text-white text-center text-sm lg:text-lg'>Three core disciplines shape everything we create. Each one built on years of <br /> experience and a commitment to excellence.</p>
             </div>
           </div>
-          <div className="w-[335px] h-[1065px] lg:w-[1280px] lg:h-[443.68px]  lg:flex justify-center lg:mt-[80px] mt-[48px]">
+          <div className="w-83.75 h-266.25 lg:w-7xl lg:h-[443.68px]  lg:flex justify-center lg:mt-20 mt-12">
             {/* Card 1 */}
             <div className="lg:w-[394.67px] lg:h-[443.68px] w-[335px] h-[323px] transition-all duration-500 ease-out hover:-translate-y-2
                              hover:shadow-[0_20px_50px_rgba(37,99,235,0.35)] rounded-2xl">
@@ -105,7 +106,20 @@ function Home() {
           </div>
         </div>
       </div>
-      {/*  */}
+      {/* image div */}
+      <div className="w-full lg:h-150 h-auto">
+        <img src={banner03} className='w-full lg:h-150 h-auto object-cover' alt="" />
+      </div>
+
+      {/* div 4  */}
+      <div className="w-full h-auto bg-[#07050D]  flex justify-center items-center">
+        <div className="w-[90%] h-100   flex justify-center items-center">
+          <div className='w-[70%] h-[90%]  text-center'>
+            <h1 className='lg:text-7xl text-white'>Premium quality and innovation</h1>
+            <p className='text-white lg:text-2xl lg:mt-15'>We don't cut corners. Every project receives the attention it deserves, combining technical excellence with creative thinking to solve problems that matter.</p>
+            </div>
+        </div>
+      </div>
   
     </>
   )
