@@ -2,9 +2,17 @@ import React from 'react'
 import Header from './Components/Header'
 import banner02 from './assets/banner02.avif'
 import banner03 from './assets/banner03.jpg'
+import banner04 from './assets/banner04.jpg'
 import card01 from './assets/card01.png'
 import card02 from './assets/card02.jpg'
 import card03 from './assets/card03.jpg'
+import { BsBriefcase } from "react-icons/bs";
+import { MdOutlineDesignServices } from "react-icons/md";
+import { HiOutlineUserGroup } from "react-icons/hi";
+import { SiWebflow } from "react-icons/si";
+import { FaRegUserCircle } from "react-icons/fa";
+import { MdArrowForwardIos } from "react-icons/md";
+import Footer from './Components/Footer'
 
 function Home() {
   return (
@@ -112,14 +120,307 @@ function Home() {
       </div>
 
       {/* div 4  */}
-      <div className="w-full h-auto bg-[#07050D]  flex justify-center items-center">
-        <div className="w-[90%] h-100   flex justify-center items-center">
-          <div className='w-[70%] h-[90%]  text-center'>
-            <h1 className='lg:text-7xl text-white'>Premium quality and innovation</h1>
-            <p className='text-white lg:text-2xl lg:mt-15'>We don't cut corners. Every project receives the attention it deserves, combining technical excellence with creative thinking to solve problems that matter.</p>
+<div className="w-full lg:h-100 h-100 bg-[#07050D] flex justify-center items-center px-4">
+  <div className="w-full max-w-5xl flex justify-center items-center py-20++">
+    <div className="w-full md:w-[70%] text-center">
+      <h1 className="text-4xl lg:text-7xl text-white font-bold leading-tight">
+        Premium quality and innovation
+      </h1>
+      <p className="text-white text-lg lg:text-2xl mt-5 lg:mt-10 leading-relaxed opacity-70">
+        We don't cut corners. Every project receives the attention it
+        deserves, combining technical excellence with creative thinking
+        to solve problems that matter.
+      </p>
+    </div>
+  </div>
+</div>
+      {/*  */}
+       <section className="bg-[#07050D] min-h-screen flex items-center justify-center px-6 py-20">
+      <div className="max-w-8xl w-full text-center">
+
+       
+
+        {/* Heading */}
+        <h2
+          className="text-white font-bold text-5xl md:text-6xl mb-6 leading-tight"
+          style={{ fontFamily: "'Georgia', serif" }}
+        >
+          Why work with us
+        </h2>
+
+        {/* Subtext */}
+        <p className="text-white/50 text-base md:text-lg max-w-xl mx-auto mb-20 leading-relaxed">
+          We've spent years building a reputation on solid work and honest relationships.
+          Here's what sets us apart.
+        </p>
+
+        {/* Cards Grid - NO MAPPING */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-white/10">
+
+          {/* Card 1 */}
+          <div className="flex flex-col items-center text-center px-10 py-8">
+            <div className="mb-6">
+              <BsBriefcase className="text-white text-3xl" />
             </div>
+            <h3
+              className="text-white font-bold text-2xl mb-4 leading-snug"
+              style={{ fontFamily: "'Georgia', serif" }}
+            >
+              Deep technical<br />expertise
+            </h3>
+            <p className="text-white/50 text-sm leading-relaxed">
+              Our team brings proven experience across industries and technologies.
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="flex flex-col items-center text-center px-10 py-8">
+            <div className="mb-6">
+              <MdOutlineDesignServices className="text-white text-3xl" />
+            </div>
+            <h3
+              className="text-white font-bold text-2xl mb-4 leading-snug"
+              style={{ fontFamily: "'Georgia', serif" }}
+            >
+              Solutions built for<br />you
+            </h3>
+            <p className="text-white/50 text-sm leading-relaxed">
+              No templates, no shortcuts—just work tailored to your specific needs.
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div className="flex flex-col items-center text-center px-10 py-8">
+            <div className="mb-6">
+              <HiOutlineUserGroup className="text-white text-3xl" />
+            </div>
+            <h3
+              className="text-white font-bold text-2xl mb-4 leading-snug"
+              style={{ fontFamily: "'Georgia', serif" }}
+            >
+              Clear communication<br />always
+            </h3>
+            <p className="text-white/50 text-sm leading-relaxed">
+              You'll know what's happening every step of the way, no surprises.
+            </p>
+          </div>
+
         </div>
+
+       
+
       </div>
+    </section>
+    {/*  */}
+      <section className="w-full min-h-screen bg-[#07050D] flex flex-col justify-center items-center px-6 py-24">
+
+      {/* Header */}
+      <div className="text-center mb-16">
+        <h2
+          className="text-white font-bold text-5xl md:text-6xl mb-4"
+          style={{ fontFamily: "'Georgia', serif" }}
+        >
+          What clients say
+        </h2>
+        <p className="text-white/40 text-base tracking-wide">
+          Real results from real projects
+        </p>
+      </div>
+
+      {/* Cards - NO MAPPING */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-white/10 max-w-8xl w-full">
+
+        {/* Card 1 */}
+        <div className="flex flex-col items-start text-left px-10 py-8 gap-6">
+          {/* Logo */}
+          <div className="flex items-center gap-2 text-white">
+            <SiWebflow className="text-2xl" />
+            <span className="text-white font-semibold text-base tracking-wide">Webflow</span>
+          </div>
+
+          {/* Quote */}
+          <p
+            className="text-white font-bold text-xl leading-snug"
+            style={{ fontFamily: "'Georgia', serif" }}
+          >
+            They transformed our entire digital presence in six months.
+          </p>
+
+          {/* Avatar + Name */}
+          <div className="flex flex-col items-center w-full mt-auto pt-4 gap-2">
+            <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+              <FaRegUserCircle className="text-white/50 text-2xl" />
+            </div>
+            <p className="text-white text-sm font-semibold">Sarah Mitchell</p>
+            <p className="text-white/40 text-xs">CEO, Nexus Corp</p>
+          </div>
+        </div>
+
+        {/* Card 2 */}
+        <div className="flex flex-col items-start text-left px-10 py-8 gap-6">
+          {/* Logo */}
+          <div className="flex items-center gap-2 text-white">
+            <SiWebflow className="text-2xl" />
+            <span className="text-white font-semibold text-base tracking-wide">Webflow</span>
+          </div>
+
+          {/* Quote */}
+          <p
+            className="text-white font-bold text-xl leading-snug"
+            style={{ fontFamily: "'Georgia', serif" }}
+          >
+            The software they built handles our operations flawlessly.
+          </p>
+
+          {/* Avatar + Name */}
+          <div className="flex flex-col items-center w-full mt-auto pt-4 gap-2">
+            <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+              <FaRegUserCircle className="text-white/50 text-2xl" />
+            </div>
+            <p className="text-white text-sm font-semibold">James Chen</p>
+            <p className="text-white/40 text-xs">Operations Director, Apex Industries</p>
+          </div>
+        </div>
+
+        {/* Card 3 */}
+        <div className="flex flex-col items-start text-left px-10 py-8 gap-6">
+          {/* Logo */}
+          <div className="flex items-center gap-2 text-white">
+            <SiWebflow className="text-2xl" />
+            <span className="text-white font-semibold text-base tracking-wide">Webflow</span>
+          </div>
+
+          {/* Quote */}
+          <p
+            className="text-white font-bold text-xl leading-snug"
+            style={{ fontFamily: "'Georgia', serif" }}
+          >
+            Their marketing strategy doubled our customer acquisition rate.
+          </p>
+
+          {/* Avatar + Name */}
+          <div className="flex flex-col items-center w-full mt-auto pt-4 gap-2">
+            <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+              <FaRegUserCircle className="text-white/50 text-2xl" />
+            </div>
+            <p className="text-white text-sm font-semibold">Elena Rodriguez</p>
+            <p className="text-white/40 text-xs">Marketing Lead, Velocity Ventures</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    {/*  */}
+     <section className="w-full bg-[#07050D] px-8 md:px-16 py-16">
+
+      {/* Top Row */}
+      <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 mb-16">
+
+        {/* Left */}
+        <div className="md:w-[45%]">
+          <p className="text-white/50 text-sm tracking-widest uppercase mb-3">
+            Track record
+          </p>
+          <h2
+            className="text-white font-bold text-4xl md:text-5xl leading-tight"
+            style={{ fontFamily: "'Georgia', serif" }}
+          >
+            Numbers that speak<br />for themselves
+          </h2>
+        </div>
+
+        {/* Right */}
+        <div className="md:w-[45%] flex flex-col gap-4">
+          <p className="text-white/60 text-base leading-relaxed">
+            Over a decade of building software that works. Hundreds of
+            projects delivered. Clients who come back because we deliver
+            what we promise.
+          </p>
+          {/* <button className="text-white/40 hover:text-white transition-colors duration-200 self-start">
+            <MdArrowForwardIos className="text-lg" />
+          </button> */}
+        </div>
+
+      </div>
+
+      {/* Divider */}
+      <div className="border-t border-white/10 mb-12" />
+
+      {/* Stats Row - NO MAPPING */}
+      <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
+
+        {/* Stat 1 */}
+        <div className="px-0 md:pr-12 py-6">
+          <p
+            className="text-white font-bold text-6xl md:text-7xl leading-none mb-3"
+            style={{ fontFamily: "'Georgia', serif" }}
+          >
+            500+
+          </p>
+          <p className="text-white font-semibold text-base tracking-wide uppercase">
+            Projects completed
+          </p>
+        </div>
+
+        {/* Stat 2 */}
+        <div className="px-0 md:px-12 py-6">
+          <p
+            className="text-white font-bold text-6xl md:text-7xl leading-none mb-3"
+            style={{ fontFamily: "'Georgia', serif" }}
+          >
+            95%
+          </p>
+          <p className="text-white font-semibold text-base tracking-wide uppercase">
+            Client retention rate
+          </p>
+        </div>
+
+        {/* Stat 3 */}
+        <div className="px-0 md:pl-12 py-6">
+          <p
+            className="text-white font-bold text-6xl md:text-7xl leading-none mb-3"
+            style={{ fontFamily: "'Georgia', serif" }}
+          >
+            12
+          </p>
+          <p className="text-white font-semibold text-base tracking-wide uppercase">
+            Years in business
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+    {/*  */}
+        <section className="w-full min-h-[400px] bg-[#07050D] flex flex-col justify-center items-center text-center px-6 py-24">
+
+      {/* Heading */}
+      <h2
+        className="text-white font-bold text-5xl md:text-6xl leading-tight mb-6 max-w-2xl"
+        style={{ fontFamily: "'Georgia', serif" }}
+      >
+        Ready to build something great
+      </h2>
+
+      {/* Subtext */}
+      <p className="text-white/50 text-base md:text-lg mb-10">
+        Let's talk about what your business needs and how we can help.
+      </p>
+
+      {/* Button - centered with mx-auto */}
+      <div className="flex justify-center w-full">
+        <button className="bg-[#1e3a5f] hover:bg-[#254d7a] text-white text-sm font-medium px-8 py-3 rounded-full transition-colors duration-200">
+          Start
+        </button>
+      </div>
+
+    </section>
+    {/* image div */}
+      <div className="w-full lg:h-150">
+        <img src={banner04} className='w-full h-full object-cover'  alt="" />
+      </div>
+      {/* footer */}
+      <Footer/>
   
     </>
   )
