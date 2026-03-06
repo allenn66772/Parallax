@@ -5,7 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 function Footer() {
   return (
     <>
-     <footer className="w-full bg-[#0e0e0e] px-6 md:px-16 pt-16 pb-8">
+     <footer className="w-full bg-[#07050D] px-6 md:px-16 pt-16 pb-8">
 
       {/* Top - Stay in the loop */}
       <div className="mb-14">

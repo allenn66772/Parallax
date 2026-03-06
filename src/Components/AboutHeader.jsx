@@ -3,11 +3,11 @@ import logo01 from '../assets/homeimages/logo01.png'
 import { HiMenu, HiX } from "react-icons/hi";
 import { Link } from 'react-router-dom';
 
-function Header() {
-  const [open, setOpen] = useState(false);
+function AboutHeader() {
+     const [open, setOpen] = useState(false);
   return (
     <>
-    <div className="w-full w-[375px] bg-black">
+     <div className="w-full w-[375px] bg-black">
       <div className="max-w-[1312px] mx-auto h-[72px] flex items-center justify-between px-4 lg:px-0">
 
         {/* Logo */}
@@ -18,7 +18,7 @@ function Header() {
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-10">
          <Link to='/'>
-            <p className="text-[#05eded] cursor-pointer transition-all duration-300 ease-in-out
+            <p className="text-white cursor-pointer transition-all duration-300 ease-in-out
                 hover:text-[#05eded] hover:drop-shadow-[0_0_8px_#05eded] hover:scale-105">
               Home
             </p>
@@ -30,7 +30,7 @@ function Header() {
           </p>
 
          <Link to="/about">
-            <p className="text-white cursor-pointer transition-all duration-300 ease-in-out
+            <p className="text-[#05eded] cursor-pointer transition-all duration-300 ease-in-out
                 hover:text-[#05eded] hover:drop-shadow-[0_0_8px_#05eded] hover:scale-105">
               About Us
             </p>
@@ -104,4 +104,4 @@ function Header() {
   )
 }
 
-export default Header
+export default AboutHeader

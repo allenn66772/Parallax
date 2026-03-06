@@ -1,18 +1,18 @@
 import React from 'react'
-import Header from './Components/Header'
-import banner02 from './assets/banner02.avif'
-import banner03 from './assets/banner03.jpg'
-import banner04 from './assets/banner04.jpg'
-import card01 from './assets/card01.png'
-import card02 from './assets/card02.jpg'
-import card03 from './assets/card03.jpg'
+import Header from '../Components/Header'
+import banner02 from '../assets/homeimages/banner02.avif'
+import banner03 from '../assets/homeimages/banner03.jpg'
+import banner04 from '../assets/homeimages/banner04.jpg'
+import card01 from '../assets/homeimages/card01.png'
+import card02 from '../assets/homeimages/card02.jpg'
+import card03 from '../assets/homeimages/card03.jpg'
 import { BsBriefcase } from "react-icons/bs";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { SiWebflow } from "react-icons/si";
 import { FaRegUserCircle } from "react-icons/fa";
 import { MdArrowForwardIos } from "react-icons/md";
-import Footer from './Components/Footer'
+import Footer from '../Components/Footer'
 
 function Home() {
   return (
