@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Header from '../Components/Header'
 import banner02 from '../assets/homeimages/banner02.avif'
 import banner03 from '../assets/homeimages/banner03.jpg'
@@ -15,6 +15,38 @@ import { MdArrowForwardIos } from "react-icons/md";
 import Footer from '../Components/Footer'
 
 function Home() {
+
+  function TypingHeadings({text,className}){
+    const [displayed,setDisplayed]=useState("")
+    const ref=useRef(null)
+
+
+    useEffect(()=>{
+      const observer=new IntersectionObserver(([entry])=>{
+        if (!entry.isIntersecting)return
+        observer.disconnect()
+        let i=0;
+        const interval=setInterval(()=>{
+          setDisplayed(text.slice(0, ++i));
+          if(i===text.length) clearInterval(interval)
+        },80)
+      },{threshold:0.4});
+
+      observer.observe(ref.current);
+      return () =>observer.disconnect()
+    },[text])
+
+
+    return(
+      <h1 ref={ref} className={className}>
+        {displayed}
+        {displayed.length < text.length && (
+          <span style={{ borderRight: "3px solid white", marginLeft: 2 }}>&nbsp;</span>
+        )}
+      </h1>
+    )
+  }
+
   return (
     <>
     {/* Header */}
@@ -28,15 +60,16 @@ function Home() {
     <div className="w-full lg:w-[768px] lg:h-[353px] flex flex-col justify-center items-center">
 
       {/* Heading */}
-      <p className="text-white 
+
+      <TypingHeadings text="Software That moves business forward"
+      className="text-white 
                     text-[38px] sm:text-[48px] md:text-[60px] 
                     lg:text-[82px] 
                     text-center 
                     leading-[45px] sm:leading-[55px] md:leading-[65px] 
-                    lg:leading-[90px]">
-        Software that moves
-        <span className="block">business forward</span>
-      </p>
+                    lg:leading-[90px]"
+                    />
+      
 
       {/* Paragraph */}
       <p className="text-white text-sm sm:text-base lg:text-lg 
@@ -70,7 +103,7 @@ function Home() {
         <div className="w-83.75 h-352.5 lg:w-7xl lg:h-[852.68px]  flex-col flex justify-center">
           <div className="lg:w-3xl lg:h-40 w-83.75 h-41.75 lg:ms-64 flex-col justify-center">
             <div className="w-83.75 h-10.75 lg:w-3xl lg:h-18  flex justify-center items-center">
-              <h1 className='text-white text-4xl lg:text-6xl font-semibold'>What we do best </h1>
+              <TypingHeadings text="What we do best" className='text-white text-4xl lg:text-6xl font-semibold' />
             </div>
             <div className="w-83.75 h-26  lg:w-3xl lg:h-16 mt-6">
               <p className='text-white text-center text-sm lg:text-lg'>Three core disciplines shape everything we create. Each one built on years of <br /> experience and a commitment to excellence.</p>
@@ -123,9 +156,9 @@ function Home() {
 <div className="w-full lg:h-100 h-100 bg-[#07050D] flex justify-center items-center px-4">
   <div className="w-full max-w-5xl flex justify-center items-center py-20++">
     <div className="w-full md:w-[70%] text-center">
-      <h1 className="text-4xl lg:text-7xl text-white font-bold leading-tight">
-        Premium quality and innovation
-      </h1>
+      <TypingHeadings className="text-4xl lg:text-7xl text-white font-bold leading-tight"
+       text=" Premium quality and innovation"
+      />
       <p className="text-white text-lg lg:text-2xl mt-5 lg:mt-10 leading-relaxed opacity-70">
         We don't cut corners. Every project receives the attention it
         deserves, combining technical excellence with creative thinking
@@ -141,12 +174,11 @@ function Home() {
        
 
         {/* Heading */}
-        <h2
+        <TypingHeadings
           className="text-white font-bold text-5xl md:text-6xl mb-6 leading-tight"
           style={{ fontFamily: "'Georgia', serif" }}
-        >
-          Why work with us
-        </h2>
+         text=" Why work with us"
+        />
 
         {/* Subtext */}
         <p className="text-white/50 text-base md:text-lg max-w-xl mx-auto mb-20 leading-relaxed">
