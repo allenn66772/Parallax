@@ -80,7 +80,7 @@ function Header() {
         <div className="lg:hidden bg-black flex flex-col items-center gap-6 py-6 border-t border-gray-800">
 
           <p className="text-white hover:text-[#05eded] cursor-pointer">Services</p>
-          <p className="text-white hover:text-[#05eded] cursor-pointer">About Us</p>
+         <Link to="/about"> <p className="text-white hover:text-[#05eded] cursor-pointer">About Us</p></Link>
           <p className="text-white hover:text-[#05eded] cursor-pointer">Contact</p>
           <p className="text-white hover:text-[#05eded] cursor-pointer">More</p>
 
