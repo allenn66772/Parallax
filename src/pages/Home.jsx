@@ -6,6 +6,8 @@ import banner04 from '../assets/homeimages/banner04.jpg'
 import card01 from '../assets/homeimages/card01.png'
 import card02 from '../assets/homeimages/card02.jpg'
 import card03 from '../assets/homeimages/card03.jpg'
+import video1 from '../assets/homeimages/vid01.mp4'
+import video02 from '../assets/homeimages/vid02.mp4'
 import { BsBriefcase } from "react-icons/bs";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { HiOutlineUserGroup } from "react-icons/hi";
@@ -53,23 +55,43 @@ function Home() {
     <Header/>
     {/* Main Contents */}
     {/* Div 1 */}
-  <div className="lg:w-full lg:h-[577px] w-full h-[454px]   bg-[#07050D] flex justify-center items-center px-4">
+  <div
+  className="lg:w-full lg:h-[577px] w-full h-[454px] flex justify-center items-center px-4"
+  style={{ position: "relative" }}
+>
+  {/* Background Video */}
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      zIndex: 0,
+    }}
+  >
+    <source src={video02} type="video/mp4" />
+  </video>
 
-  <div className="w-full lg:w-[1280px] lg:h-[353px] flex justify-center">
+  {/* Content on top of video */}
+  <div className="w-full lg:w-[1280px] lg:h-[353px] flex justify-center" style={{ position: "relative", zIndex: 1 }}>
 
     <div className="w-full lg:w-[768px] lg:h-[353px] flex flex-col justify-center items-center">
 
       {/* Heading */}
-
       <TypingHeadings text="Software That moves business forward"
-      className="text-white 
-                    text-[38px] sm:text-[48px] md:text-[60px] 
-                    lg:text-[82px] 
-                    text-center 
-                    leading-[45px] sm:leading-[55px] md:leading-[65px] 
-                    lg:leading-[90px]"
-                    />
-      
+        className="text-white 
+                   text-[38px] sm:text-[48px] md:text-[60px] 
+                   lg:text-[82px] 
+                   text-center 
+                   leading-[45px] sm:leading-[55px] md:leading-[65px] 
+                   lg:leading-[90px]"
+      />
 
       {/* Paragraph */}
       <p className="text-white text-sm sm:text-base lg:text-lg 
@@ -186,7 +208,7 @@ function Home() {
           Here's what sets us apart.
         </p>
 
-        {/* Cards Grid - NO MAPPING */}
+      
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-white/10">
 
           {/* Card 1 */}
